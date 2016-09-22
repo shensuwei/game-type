@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>打字游戏</title>
+	<link rel="stylesheet" href="css/game.css">
+	<script src="js/function.js"></script>
+	<script src="js/game.js"></script>
+</head>
+<body>
+	<div class="sense">
+		<div class="start btn">开始</div>
+		<div class="stop btn">暂停</div>
+		<div class="end btn">结束</div>
+	</div>
+</body>
+<script>
+	var sense=$(".sense")[0];
+	var start=$(".start")[0];
+	var stop=$(".stop")[0];
+	var end=$(".end")[0];
+	var g=new game(sense);
+	var flag=false;
+
+	start.onclick=function(){
+		if(!flag){
+			g.play();
+			g.key();
+		}
+	}
+	// stop.onclick=function(){
+	// 	if(!tflag){
+	// 		clearInterval(t);
+	// 		tflag=true;
+	// 	}else{
+	// 		t=setInterval(diao,50);
+	// 		tflag=false;
+	// 	}
+	// }
+	end.onclick=function(){
+		clearInterval(t);
+	}
+	
+
+</script>
+</html>
